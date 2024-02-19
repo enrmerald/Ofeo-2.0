@@ -1,0 +1,262 @@
+/* Cargo mi fuente  del archivo */
+@font-face {
+    font-family: 'ROBTRONIKA';
+    src: url('../fonts/Robtronika-4Bq8p.ttf');
+    /* Agrega más formatos si es necesario (por ejemplo, .ttf) */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'AstroSpace';
+    src: url('../fonts/AstroSpace-eZ2Bg.ttf');
+    /* Agrega más formatos si es necesario (por ejemplo, .ttf) */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    color: darkgreen;
+    font-family: 'AstroSpace';
+    font-size: 11px;
+    background-color: lightgray;
+}
+
+.neotec-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    border: 1px solid darkgreen;
+    height: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.neotec-form-footer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: end;
+}
+
+
+.neotec-button-submit{
+    padding: 10px;
+    background-color:rgb(160, 221, 165);
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+}
+
+
+
+
+
+.neotec-brand-logo {
+    border: 1px solid darkgreen;
+    border-radius: 50%;
+    max-width: 64px;
+    margin-right: 20px; 
+}
+
+#neotec-title {
+    color: darkgreen;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+#neotec-kpi {
+    display: flex;
+    justify-content: center;
+}
+
+.neotec-card {
+    padding-top: 20px;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: white !important;
+}
+
+.neotec-card .card-footer {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#neotec-graphs {
+    background-color: lightsteelblue;
+    margin: 10px;
+    height: 450px;
+    }
+
+#radial_chart {
+
+}
+
+#neotec-timeline {
+    background-color: lightgrey;
+    margin: 10px;
+    height: 300px;
+}
+
+#neotec-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1; /* color de fondo del footer */
+    padding: 10px; /* espacio interno dentro del footer */
+    text-align: center; /* alineación del texto en el centro */
+    display: flex;
+    justify-content: center;
+}
+
+
+#neotec-term {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.neotec-term-container {
+    height: 24px;
+    margin-left: 20px;
+    width: 400px;
+    position: relative;
+}
+
+.neotec-term-ok {
+    background-color: lightgreen;
+    width: 100%;
+    position: absolute;
+    background-color: lightgreen;
+    
+    height: 99%;
+    width: 100%;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+}
+
+.neotec-term-danger {
+    position: absolute;
+    background-color: lightcoral;
+    height: 99%;
+    width: 20%;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+}
+
+
+
+
+/* Bootstrap5 overwrites */
+.navbar-brand {
+    font-family: 'ROBTRONIKA' !important;
+    transform: scaleY(1.9);
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.nav-link {
+    color: darkgreen;
+}
+
+.card {
+    min-width: 250px;
+}
+.neotec-card-title {
+    font-size: 10px;
+}
+
+.neotec-card-text {
+    font-size: 12px;
+}
+
+.neotec-card-title, .neotec-card-text, .neotec-card-footer {
+    text-align: center;
+    color: darkgreen;
+}
+.card {
+    display: inline-block;
+}
+
+
+.neotec-card-body {
+    height: 40px;
+}
+
+.neotec-card-footer {
+    text-align: center;
+    color: darkgreen;
+    bottom: -15px;
+}
+
+
+.neotec-ia-mode {
+    background-color: white;
+    color: darkgreen;
+    margin: 10px 30px;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+
+.neotec-user{
+    font-weight: bold;
+    margin: 0px 30px;
+}
+
+.neotec-company{
+    margin: 0;
+    margin: 0px 30px;
+}
+
+
+/* ---- MEDIA QUERY - RESPONSIVE SIZES ----*/
+/* Very Little resolution */
+@media (max-width: 599px){
+    .neotec-card {
+        margin: 10px auto;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* Little resolution */
+@media (min-width: 600px) and (max-width: 892px){
+    .neotec-card {
+        margin: 2% auto;
+        width: 40%
+    }
+}
+
+/* Medium resolution */
+@media (min-width: 893px) and (max-width: 1102px){
+    .neotec-card {
+        margin: 10px auto;
+        width: 14%
+    }
+}
+
+/* High resolution */
+@media (min-width: 1103px) {
+    .neotec-card {
+        margin: 10px auto;
+        width: 14%
+    }
+}
+
+/* Hightest resolutions */
+/*
+@media (min-width: 1300px) {
+    .neotec-card {
+        margin: 10px 0.5%;
+        min-width: 250px !important;
+       
+        color:blue !important;
+    }
+}
+*/

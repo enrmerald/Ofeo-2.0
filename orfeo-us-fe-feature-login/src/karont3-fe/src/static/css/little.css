@@ -1,0 +1,46 @@
+/* LITTLE RESOLUTION */
+@media (min-width: 600px) and (max-width: 892px) {
+    .ewala-card {
+        margin: 2% auto;
+        width: 40%
+    }
+
+    .toggle-sidebar-button {
+        display: flexs !important;
+    }
+
+    .sidebarPage {
+        display: none !important;
+    }
+
+    .contentPage {
+        left: 0px !important;
+        right: 0px !important;
+        transition: left 0.3s ease;
+        transition: border-radius 0.3s ease;
+        border-radius: 0 !important;
+    }
+
+    .component-title {
+        font-size: var(--font-size-litte) !important;
+        /* 16px !important */
+        height: var(--title-height);
+        /* Le doy un alto de mas de dos lineas por si algun KPI llega a ellas, y darles la misma altura a todos */
+    }
+
+    /*Contadores */
+
+    .counter-container .card {
+        min-width: 7rem !important;
+        max-width: 15rem !important;
+    }
+
+    .counter-container h5 span {
+        font-size: 1rem;
+    }
+
+    .counter-container .card-body {
+        padding: 10px;
+    }
+
+}

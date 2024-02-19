@@ -1,0 +1,161 @@
+/* ---- MEDIA QUERY - RESPONSIVE SIZES ----*/
+/* Very Little resolution */
+@media (max-width: 599px) {
+    .ewala-card {
+        margin: 10px auto;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .toggle-sidebar-button {
+        display: flex !important;
+    }
+
+    .sidebarPage {
+        display: none !important;
+    }
+
+    .contentPage,
+    .show-sidebar {
+        left: 0px !important;
+        transition: left 0.3s ease;
+        transition: border-radius 0.3s ease;
+        right: 0px !important;
+    }
+    .component-title {
+        font-size: var(--font-size-litte) !important;
+        height: calc(--font-size-litte + 4) !important;
+        /*  var(--title-height) */
+        /* Le doy un alto de dos lineas por si algun KPI llega a ellas, y darles la misma altura a todos */
+    }
+
+    .kpi-graph {
+        margin-top: var(--distancia);
+        margin-left: var(--distancia);
+        margin-left: var(--distancia);
+        padding: 0px;
+        display: grid;
+        column-gap: var(--distancia);
+        row-gap: var(--distancia);
+        height: calc(100% - var(--distancia));
+        width: calc(50% - var(--distancia)* 1.5);
+    }
+
+    .row-kpi {
+        height: 15% !important;
+    }
+
+    .row-scatter {
+        height: 45% !important;
+    }
+
+    /*Date pcikers*/
+    #date-range {
+        align-items: center;
+        font-size: 12px;
+        height: 2rem;
+        width: fit-content;
+        text-align: center;
+
+    }
+
+    .datePickers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #start-datePicker,
+    #end-datePicker {
+        font-size: 11px;
+        height: 2rem;
+        padding: 2px;
+    }
+
+    /**CONTADORES **/
+
+    .counter-container {
+        display: grid;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .counter-container .card {
+        min-width: 4rem !important;
+        max-width: 5rem !important;
+    }
+
+    .counter-container h5 span {
+        display: none;
+    }
+
+    #count-chart .card-body {
+        border: 3px solid;
+    }
+
+    .counter-container .card .card-body {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .counter-container .card-body {
+        padding: var(--distancia-mitad);
+
+    }
+
+    .counter-container .card-title .col-auto {
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* Selector - Color Picker */
+    .w-color-swatch {
+        border-radius: 5px !important;
+        position: absolute;
+        margin: 0;
+    }
+
+    .w-color-swatch.w-color-github.w-color-chrome {
+        width: 150px !important;
+        display: flex;
+        contain: content;
+    }
+
+    .w-color-editable-input {
+        margin: 0 !important;
+        width: fit-content;
+    }
+
+    .w-color-editable-input-rgba {
+        width: 150px !important;
+    }
+
+    .w-color-interactive {}
+
+    .w-color-editable-input-rgba input {
+        padding: 0 !important;
+        font-size: 8px !important;
+        font-family: 'SpaceMono' !important;
+        margin: 0 !important;
+        width: 30px !important;
+    }
+
+    .w-color-interactive.w-color-saturation {
+        border-radius: 10px !important;
+        height: 5rem !important;
+        margin-right: 5pc !important;
+    }
+    
+    .dropdown-menu.horizontal-menu{
+        width: 100%;
+    }
+    .dropdown-menu.horizontal-menu .item-button{
+        font-size: small;
+        margin: 0 5px;
+    }
+    .horizontal-dropdown {
+        position: static !important;
+      }
+    #addElement.btn, #dropdownMenuButtonTable{
+        font-size: .75rem;
+    }      
+}

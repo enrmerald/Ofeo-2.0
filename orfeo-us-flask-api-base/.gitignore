@@ -1,0 +1,3 @@
+venv/
+src/us_flask_api/__pycache__/*
+.env

@@ -1,0 +1,60 @@
+{
+    "display": {
+      "logo": "src/static/imgs/ewala_orfeo.png",
+      "colors": {
+        "text-color": ["#15040E", "#FFFFFF"],
+        "back-content-color": ["#FFFFFF", "#55rfc4"],
+        "shadow-dark": ["#1b1f1d5e", "#1b1f1d5e"],
+        "highlight-color": ["#21c9c0", "#21c9c0"],
+        "light-color": ["#e9ffe6", "#e9ffe6"],
+        "border-color": ["#541338", "#541338"],
+        "form-background": ["#FFFFFF00", "#FFFFFF00"],
+        "back-color": ["#74b9ff", "#74b9ff"],
+        "color-1": ["#664c5b", "#664c5b"],
+        "color-2": ["#9D4F7D", "#9D4F7D"],
+        "color-3": ["#7E1B55", "#7E1B55"],
+        "color-4": ["#631644", "#631644"],
+        "color-5": ["#491032", "#491032"],
+        "color-6": ["#2F0A20", "#2F0A20"],
+        "color-7": ["#360b27", "#360b27"],
+        "color-comp-titles": ["#4d6259", "#4d6259"],
+        "color-sombra": ["#5d8979", "#5d8979"],
+        "color-shadow-comp": ["#3c3c3cae", "#3c3c3cae"],
+        "color-shadow-topbar": ["#3c3c3cae", "#21c9c0"],
+        "color-add-highlight": ["#21c9c0", "#979194"],
+        "color-content-back": ["#979194", "#979194"],
+        "color-semi-transparent": ["#0A0A0AFF", "#0A0A0AFF"]
+      },
+      "graph_colors": ["#7E1B54", "#67446C", "#536A84", "#00a7a3", "#3F909C", "#2BB6B4", "#21C9C0"],
+      "font": {
+        "font-name": "SpaceMono",
+        "font-size-litte": "12px !important",
+        "font-size-medium": "13px",
+        "font-size-large": "14px",
+        "font-size-extra-large": "16px"
+      },
+      "counters": {
+        "channels": true,
+        "organizations": true,
+        "persons": false,
+        "entities": false,
+        "discoveries": true
+      },
+      "theme": ""
+    },
+    "sources": {
+      "free": {
+        "free1": true,
+        "free2": false
+      },
+      "paid": {
+        "paid1": false,
+        "paid2": false
+      }
+    },
+    "general": {
+      "general1": true,
+      "general2": false,
+      "general3": true
+    }
+  }

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    
+    <!-- Scripts for Bootstrap5.3.2  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Link for the icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Script for JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FontAwesome-->
+    <script src="https://kit.fontawesome.com/c0fb7d670f.js" crossorigin="anonymous"></script>
+    <!-- Tabulator--> 
+    <!-- CDN of Tabulator 5.5 -->
+    <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
+ 
+    <!-- Script for common functions -->
+    <script src="./src/common.js"></script>
+    <script>
+      // Recupera el tema almacenado en localStorage o establece 'light' como valor predeterminado
+      const savedTheme = localStorage.getItem('data-theme') || 'light';
+      // Establece el tema en el atributo data-theme de la etiqueta html
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
