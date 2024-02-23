@@ -1,0 +1,81 @@
+/* Personalización CSS de la paleta */
+@import url('./very_little.css');
+@import url('./little.css');
+@import url('./medium.css');
+
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  background-color: var(--back-color);
+  color: var(--color-content-back);
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para formularios y botones */
+.login-form, .ewala-form-container {
+  background-color: var(--form-background);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 2px 4px var(--color-shadow-comp);
+  border-radius: 8px;
+  padding: 2em;
+  max-width: 400px;
+  margin: auto;
+}
+
+.ewala-button-submit {
+  background-color: var(--primary-color);
+  color: var(--color-content-back);
+  border: none;
+  border-radius: 4px;
+  padding: var(--spacing-unit) var(--spacing-unit * 2);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ewala-button-submit:hover {
+  background-color: var(--button-hover-color);
+  box-shadow: 0 2px 4px var(--button-shadow-color);
+}
+
+/* Mejoras generales en componentes para coherencia y accesibilidad */
+.ewala-form-control, .ewala-license-input, select {
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  padding: var(--spacing-unit);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ewala-form-control:focus, .ewala-license-input:focus {
+  outline: none;
+  border-color: var(--text-emphasis-color);
+  box-shadow: 0 0 0 2px rgba(var(--text-emphasis-color), 0.25);
+}
+
+/* Estilos para hover en enlaces y botones adicionales */
+a:hover, .ewala-button-register:hover, .ewala-button-logout:hover {
+  text-decoration: underline;
+  color: var(--button-hover-color);
+}
+
+/* Sombreado y énfasis en textos */
+.ewala-label, .title-login-form, .component-title {
+  color: var(--text-emphasis-color);
+}
+
+/* Mejoras en responsive design y accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation-duration: 0s !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ewala-form-container, .login-form {
+    padding: 1em;
+    max-width: 100%;
+  }
+}

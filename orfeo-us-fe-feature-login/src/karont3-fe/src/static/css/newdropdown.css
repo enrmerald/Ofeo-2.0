@@ -1,0 +1,76 @@
+@import url('./very_little.css');
+@import url('./little.css');
+@import url('./medium.css');
+@import url('./ewala_css.css');
+
+/* Estilos generales para botones */
+button, .btn {
+  font-family: var(--font-family-base);
+  padding: var(--spacing);
+  margin: var(--spacing) 0;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Asegura que no hay espacio adicional */
+}
+
+/* Estilos para elementos de la lista */
+li {
+  color: var(--text-color);
+  padding: var(--spacing);
+  transition: background-color 0.2s ease;
+}
+
+
+/* Estilos para botón secundario */
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Estilos para elementos activos */
+.active, .active .btn-secondary {
+    width: 100%; /* Asegura que el elemento activo llene el contenedor */
+    display: block; /* Mantiene los elementos internos en línea */
+    justify-content: space-between; /* Distribuye el espacio entre elementos internos */
+}
+
+.inactive {
+  display: none;
+}
+
+/* Ajustes para botones dentro de elementos activos */
+.btn-secondary .item-button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+  outline: 2px solid var(--text-emphasis-color);
+  outline-offset: 2px;
+}
+
+/* Media queries para responsividad */
+@media {
+  .btn, button {
+    padding: 10px;
+    width: 100%; /* Asegura que los botones sean completamente accesibles en dispositivos móviles */
+  }
+}

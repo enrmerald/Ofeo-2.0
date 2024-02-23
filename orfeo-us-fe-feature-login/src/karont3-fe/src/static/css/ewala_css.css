@@ -5,12 +5,31 @@ Personalización CSS de la paleta
 @import url('./little.css');
 @import url('./medium.css');
 :root {
-  /* Color primario y secundario de la paleta */
-  /*
-  Paleta ewala eliminada para hacerla mas gris
-  --primary-color: #00d684;
-  --secondary-color: #194d39;
-  */
+
+   /* Colores de la paleta */
+   --primary-color: #FFEAA7; /* Azul claro */
+   --secondary-color: #55EFC4; /* Verde/azul turquesa */
+   --text-emphasis-color: #FDCB6E; /* Amarillo/mostaza para énfasis */
+   --button-hover-color: #74B9FF; /* Amarillo claro para hover */
+   --button-shadow-color: #DFE6E9; /* Gris claro para sombras */
+ 
+   /* Colores adicionales ajustados */
+   --back-color: var(--primary-color);
+   --color-content-back: #FFFFFF; /* Blanco para fondos de contenido */
+   --color-shadow-comp: var(--button-shadow-color);
+   --color-shadow-topbar: rgba(0, 0, 0, 0.1); /* Sombra suave para la barra superior */
+   --color-add-highlight: var(--text-emphasis-color);
+   --form-background: #FAFAFA; /* Gris muy claro para fondos de formularios */
+   --card-background: var(--secondary-color);
+   
+   /* Fuentes y tamaños */
+   --font-family-base: 'SpaceMono', sans-serif;
+   --font-size-base: 16px; /* Tamaño de fuente base */
+   
+   /* Espaciado y dimensiones generales */
+   --spacing-unit: 10px; /* Unidad base de espaciado */
+  
+
   --text-color: ''
     --back-content-color: white;
   --shadow-dark: #1b1f1d5e;
@@ -20,8 +39,6 @@ Personalización CSS de la paleta
   --form-background: transparent;
   --card-background: transparent;
 
-
-  --back-color: #74b9ff;
   --color-1: #664c5b;
   --color-2: #9D4F7D;
   --color-3: #7E1B55;
@@ -105,7 +122,7 @@ body {
   font-family: 'SpaceMono';
   font-size: var(--font-size-medium);
   /* 12px */
-  background: var(--back-color);
+  background-color: var(--back-color);
 }
 
 .ewala-form-container {
@@ -115,13 +132,13 @@ body {
 }
 
 .login-form {
-  border: 1px solid #360b27;
-  box-shadow: 5px 5px 5px black;
-  min-height: 400px;
-  padding: 40px;
-  border-radius: 10px;
-  background-color: white;
+  background-color: var(--form-background);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 2px 4px var(--color-shadow-comp);
+  border-radius: 8px;
+  padding: 2em;
   max-width: 400px;
+  margin: auto;
 }
 
 .login-form-head {
@@ -664,7 +681,7 @@ li a:hover {
 }
 
 
-.dropdown-menu>li {
+.dropdown-menuli {
   color: var(--text-color) !important;
   /* background-color: var(--color-semi-transparent) !important; */
 }
@@ -1147,7 +1164,7 @@ button:not(#dd_search, #dropdownButton, #dd-tenant-change, .item-button) {
   color: var(--highlight-color);
   background-color: var(--highlight-color);
   box-shadow: 5px 5px 3px var(--color-shadow-topbar);
-  background-color: transparent;
+  background-color: var(--secondary-color);
   border: 1px solid var(--color-add-highlight);
 }
 
@@ -2087,7 +2104,7 @@ align-self: center;}
   --form-background: #FFFFFF00;
 
 
-  --back-color: #74b9ff;
+  --back-color: #FFEAA7;
   --color-1: #664c5b;
   --color-2: #9D4F7D;
   --color-3: #7E1B55;

@@ -2202,18 +2202,71 @@ def get_nav_data():
                 # Grupo Ac"value" Management
                 {
                     "name": "Account Management",
+                    "type" : "dropdown",
                     "elements": [
-                        {"name": "Channels", "url": "http://localhost:5173/channels/"},
+                        {
+                            "name": "Channels", 
+                            "url": "http://localhost:5173/channels/",
+                        },
                         {
                             "name": "Organizations",
                             "url": "http://localhost:5173/organizations/",
                         },
-                        {"name": "Employees", "url": "http://localhost:5173/persons/"},
                     ],
                 },
+
+                {
+                    "name": "Assets Management",
+                    "type" : "dropdown",
+                    "elements": [
+                        {
+                            "name": "Overview", 
+                            "url": "http://localhost:5173/assets/overview/"
+                        },
+                        {
+                            "name": "New Asset",
+                            "url": "http://localhost:5173/assets/newassets/",
+                        },
+                    ],
+                },
+                {
+                    "name": "Context",
+                    "type" : "newdropdown",
+                    "elements": [
+                    {
+                        "name": "Domains",
+                        "type" : "dropdown",
+                        "elements": [
+                            { "name": "Attributes", "url": "http://localhost:5173/context/domains/attributes/" },
+                            { "name": "Insights", "url": "http://localhost:5173/context/domains/insights/" },
+                            { "name": "Reputation", "url": "http://localhost:5173/context/domains/reputation/" }
+                            ]
+                    },
+                    {
+                        "name": "IPs",
+                        "type" : "dropdown",
+                        "elements": [
+                        { "name": "Attributes", "url": "http://localhost:5173/context/ips/attributes/" },
+                        { "name": "Insights", "url": "http://localhost:5173/context/ips/insights/" },
+                        { "name": "Reputation", "url": "http://localhost:5173/context/ips/reputation/" }
+                        ]
+                    },
+                    {
+                        "name": "Emails",
+                        "type" : "dropdown",
+                        "elements": [
+                        { "name": "Attributes", "url": "http://localhost:5173/context/emails/attributes/" },
+                        { "name": "Insights", "url": "http://localhost:5173/context/emails/insights/" },
+                        { "name": "Reputation", "url": "http://localhost:5173/context/emails/reputation/" }
+                        ]
+                    }
+                    ]
+                },
+
                 # Grupo "Monitoring"
                 {
-                    "name": "Monitoring",
+                    "name": "Domain Monitoring",
+                    "type" : "dropdown",
                     "elements": [
                         {
                             "name": "Discoveries",
@@ -2221,53 +2274,9 @@ def get_nav_data():
                         },
                     ],
                 },
-                {
-                    "name": "Entities",
-                    "elements": [
-                        {
-                            "name": "Alias",
-                            "url": "http://localhost:5173/entities/alias/",
-                        },
-                        {
-                            "name": "Emails",
-                            "url": "http://localhost:5173/entities/emails/",
-                        },
-                        {
-                            "name": "Dns",
-                            "url": "http://localhost:5173/entities/dns/",
-                        },
-                        {
-                            "name": "Domains",
-                            "url": "http://localhost:5173/entities/domains/",
-                        },
-                        {
-                            "name": "Documents",
-                            "url": "http://localhost:5173/entities/documents/",
-                        },
-                        {
-                            "name": "Numbers",
-                            "url": "http://localhost:5173/entities/numbers/",
-                        },
-                    ],
-                },
-                # Grupo IT TEAM
-                {
-                    "name": "IT Team",
-                    "elements": [
-                        {"name": "Users", "url": "http://localhost:5173/users/"},
-                        {"name": "Leaks", "url": "http://localhost:5173/leaks/"},
-                    ]
-                },
+                
                 {"name": "Requests", "url": "http://localhost:5173/requests/"},                
                 {"name": "Report", "url": "http://localhost:5173/report/"}
-                # {"name": "Channels", "url": "http://localhost:5173/channels"},
-                # {"name": "Organizations", "url": "http://localhost:5173/organizations"},
-                # {"name": "Persons", "url": "http://localhost:5173/employees"},
-                # {"name": "Entities", "url": "http://localhost:5173/entities"},
-                # {"name": "Discoveries", "url": "http://localhost:5173/discoveries"},
-                # {"name": "Requests", "url": "http://localhost:5173/requests"},
-                # {"name": "Leaks", "url": "http://localhost:5173/leaks"},
-                # {"name": "Users", "url":  "http://localhost:5173/users"}
             ]
             result["http_request"]["code"] = 200
             result["http_request"]["status"] = "ok"

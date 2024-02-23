@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { SidebarItem } from "./Atoms/SidebarItem";
-import DropdownButton from "./Atoms/DropdownButton";
+import DropdownButton from './Atoms/DropdownButton';
+import DropdownContainer from './Atoms/DropdownContainer';
 import { UseUser } from "../auth/UserAuth";
+import { NewDropdown } from "./Atoms/NewDropDown";
 
 /* Barra lateral de navegación
   parámetros:
@@ -9,7 +11,7 @@ import { UseUser } from "../auth/UserAuth";
     - notenanchange: para que no cargue ( muestre) el dropdown del tenant
     - links: listado de diccionario de links {'name': nombre, 'url': url, 'tag':tagName || null}
 */
-const SideBar = ({ nosideitems, notenantchange, links }) => {
+const SideBar = ({ nosideitems, notenantchange, links = [] }) => {
   /*Valores por defecto (mockup) */
   const noLinks = [
     { text: "...", active: true },
@@ -38,7 +40,7 @@ const SideBar = ({ nosideitems, notenantchange, links }) => {
     })
   }
 
-  
+  console.log("SideBar ", links)
 
   return (
     <>
@@ -51,7 +53,7 @@ const SideBar = ({ nosideitems, notenantchange, links }) => {
             {links ? (
               // Por cada elemento (linkGroup)
               links.map((item, index) => (
-                <>
+                <li key={`nv_li-${index}`}>
                   {/* si no hay 'elements', muestra un sidebaritem normal  */}
                   {!item.elements ? (
                     <SidebarItem
@@ -59,17 +61,24 @@ const SideBar = ({ nosideitems, notenantchange, links }) => {
                       active={item.url === urlPath}
                       onClick={() => handleSelected(item, index)} />
                   ) : (// Si hay 'elements' crea un Dropdown con el nombre del link (Grupo)
-                    <DropdownButton transparent isDropdownVisible text={item.name} active={item.url === urlPath}
-                      // Para cada 'elements' dentro del link (Grupo), obtengo su nombre, y lo defino como opcion
-                      // para el dropdown
+                  item.type === "newdropdown" ? (
+                    <NewDropdown
+                      text={item.name}
+                      child={item.elements}
+                    />
+                  ) : (
+                    <DropdownButton
+                      text={item.name}
+                      child={item.elements}
                       options={item.elements.map((element) => ({
                         text: element.name,
                         onClick: () => handleSelected(element, index),
                       }))}
                     />
-                  )}
+                  )
+                )}
 
-                </>))
+                </li>))
             ) : (
               // Cuando aún no han cargado los datos o no hay datos
               // lista de {...}

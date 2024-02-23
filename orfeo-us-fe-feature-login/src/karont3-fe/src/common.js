@@ -45,7 +45,6 @@ async function RequestServer(route, method="POST", postData="", functionToUse) {
       // If token exists it must be ib headers auth as bearer token
       if (postData && postData.security && postData.security.token) {
         headers['Authorization'] = `Bearer ${postData.security.token}`;
-        console.log('entra')
       }
    
       // Create a dictionary with the method and the headers
@@ -63,11 +62,9 @@ async function RequestServer(route, method="POST", postData="", functionToUse) {
     const result = await fetch(route, requestOptions)
     .then(responseServer => {
           if (responseServer.ok) {
-            console.log('entra')
               // Parsea el cuerpo de la respuesta como JSON y devuelve una promesa
               return responseServer;
           } else {
-            console.log('entra')
               // Si la respuesta tiene un código de error
               throw new Error('Request error');
           }

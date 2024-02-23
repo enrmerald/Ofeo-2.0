@@ -51,7 +51,7 @@ const Topbar = ({ token = '123456', companyName = "", ico = EwalaImg, nosearch =
   }, []);
 
   const showSearchBar = windowWidth >= 768;
-  console.log('logo', logo)
+  
   return (
     <div className="topbar">
       <div className="topbarDiv">
