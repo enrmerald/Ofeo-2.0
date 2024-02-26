@@ -45,6 +45,7 @@ cond_inner = {
         "refcode": " organizations.refcode = UPPER(%s)",
         "phonenum": text_condition.format("organizations.phonenum"),
         "active": " organizations.active = %s",
+        "city" : "(select addresses.city from addresses where addresses.id = organizations.fk_address)"
         **generate_date_filters("organizations")
     },
     "addresses": {
@@ -236,27 +237,7 @@ cond_id = {
             "priority_id",
             "(select request_priority.id from request_priority where request_priotity.name = %s)",
         ),
-    },
-    "leaks": {
-        "source": (
-            "source_id",
-            "(select leak_sources.id from leak_sources where leak_sources.name = %s)",
-        ),
-        "sector": (
-            "sector_id",
-            "(select leak_sectors.id from leak_sectors where leak_sectors.name = %s)",
-        ),
-        "kinds": (
-            "kind_id",
-            "(select entity_kinds.id from entity_kinds, leak_kinds where leak_kinds.leak_id = leaks.id and  entity_kinds.name = %s)",
-        ),
-    },
-    "leak_kinds": {
-        "kind_id": (
-            "kind_id",
-            "(select entity_kinds.id from entity_kinds where entity_kinds.name =  %s)",
-        )
-    },
+    }
 }
 
 # Conexión a la base de datos

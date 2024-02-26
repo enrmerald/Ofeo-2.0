@@ -73,7 +73,7 @@ const DropdownButton = ({
           options.map((item, index) => (
               <li key={`${id_dd}-${index}`}>
                 <button className="item-button" onClick={(e)=> {cambiarClase(); item.onClick();} }>
-                  {item.text}
+                  { item.text }
                 </button>
               </li>
           ))

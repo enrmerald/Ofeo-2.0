@@ -40,8 +40,6 @@ const SideBar = ({ nosideitems, notenantchange, links = [] }) => {
     })
   }
 
-  console.log("SideBar ", links)
-
   return (
     <>
       {/* Contenedor del sidebar */}
@@ -114,7 +112,7 @@ const SideBar = ({ nosideitems, notenantchange, links = [] }) => {
               options={[
                 {
                   text: "Select tenant",
-                  link: "/tenants",
+                  link: "/tenants/",
                   onClick: logoutTenant,
                 },
               ]}
