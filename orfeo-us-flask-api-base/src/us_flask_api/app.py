@@ -217,13 +217,20 @@ def index():
     status_url = url_for("status", _external=True)
     channels_url = url_for("channels", _external=True)
     organizations_url = url_for("organizations", _external=True)
-    persons_url = url_for("persons", _external=True)
-    entities_url = url_for("entities", _external=True)
+    overview_url = url_for("overview", _external=True)
+    newassets_url = url_for("newassets", _external=True)
+    domain_attributes_url = url_for("domains/attributes", _external=True)
+    domain_insights_url = url_for("domains/insights", _external=True)
+    domain_reputation_url = url_for("domains/reputation", _external=True)
+    ips_attributes_url = url_for("ips/attributes", _external=True)
+    ips_insights_url = url_for("ips/insights", _external=True)
+    ips_reputation_url = url_for("ips/reputation", _external=True)
+    emails_attributes_url = url_for("emails/attributes", _external=True)
+    emails_insights_url = url_for("emails/insights", _external=True)
+    emails_reputation_url = url_for("emails/reputation", _external=True)
     discoveries_url = url_for("discoveries", _external=True)
     requests_url = url_for("requests", _external=True)
-    users_url = url_for("users", _external=True)
-    leaks_url = url_for("leaks", _external=True)
-
+    
     api_docs_url = url_for("apifairy.docs", _external=True)
 
     # Here comes business logic
@@ -236,7 +243,92 @@ def index():
     return response, 200
 
 
+results = {
+    "security" : {
+        "token" : "1234"
+    },
+    "data" : {
+        "message" : "Hola buenas tardes"
+    }
+    
+}
+
 # List elements
+
+@app.route("/overview/", methods=["GET"])
+def overview():
+    overview_url = url_for("overview", _external=True)
+    
+    return results
+
+
+@app.route("/newassets/", methods=["GET"])
+def newassets():
+    newassets_url = url_for("newassets", _external=True)
+    
+    return results
+
+
+@app.route("/domains/attributes/", methods=["GET"])
+def domain_attributes():
+    domain_attributes_url = url_for("domains/attributes", _external=True)
+    
+    return results
+    
+    
+@app.route("/domains/insights/", methods=["GET"])
+def domain_insights():
+    domain_insights_url = url_for("domains/insights", _external=True)
+    
+    return results
+
+
+@app.route("/domains/reputation/", methods=["GET"])
+def domain_reputation():
+    domain_reputation_url = url_for("domains/reputation", _external=True)
+    
+    return results
+
+
+@app.route("/ips/attributes/", methods=["GET"])
+def ips_attributes():
+    ips_attributes_url = url_for("ips/attributes", _external=True)
+    
+    return results
+
+
+@app.route("/ips/insights/", methods=["GET"])
+def ips_insights():
+    ips_insights_url = url_for("ips/insights", _external=True)
+    
+    return results
+
+
+@app.route("/ips/reputation/", methods=["GET"])
+def ips_reputation():
+    ips_reputation_url = url_for("ips/reputation", _external=True)
+    
+    return results
+
+    
+@app.route("/emails/attributes/", methods=["GET"])
+def emails_attributes():
+    emails_attributes_url = url_for("emails/attributes", _external=True)
+    
+    return results
+
+
+@app.route("/emails/insights/", methods=["GET"])
+def emails_insights():
+    emails_insights_url = url_for("emails/insights", _external=True)
+    
+    return results
+
+
+@app.route("/emails/reputation/", methods=["GET"])
+def emails_reputation():
+    emails_reputation_url = url_for("emails/reputation", _external=True)
+    return results
 
 
 @app.route("/channels/", methods=["GET", "POST"])

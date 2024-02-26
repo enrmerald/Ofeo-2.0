@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
 import "../../static/css/Dropdown.css"
-import DropdownContainer from "./DropdownContainer";
 /* Componente botón Dropdown
   parámetros:
   - id_dd: identificador del botón
@@ -71,13 +70,12 @@ const DropdownButton = ({
       <ul ref={dropdownRef} className="inactive btn-secundary btn">
       {/* Renderiza el contenedor del menú */}
         {child.length > 0 ? (
-          child.map((item, index) => (
-
-            <li key={`${id_dd}-${index}`}>
-              <button className="item-button" onClick={cambiarClase}>
-                {item.name}
-              </button>
-            </li>
+          options.map((item, index) => (
+              <li key={`${id_dd}-${index}`}>
+                <button className="item-button" onClick={(e)=> {cambiarClase(); item.onClick();} }>
+                  {item.text}
+                </button>
+              </li>
           ))
         ) : (
           // Si no hay opciones, renderiza elementos de relleno

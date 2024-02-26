@@ -65,10 +65,15 @@ const SideBar = ({ nosideitems, notenantchange, links = [] }) => {
                     <NewDropdown
                       text={item.name}
                       child={item.elements}
+                      options={item.elements.map((element) => ({
+                        text: element.name,
+                        onClick: () => handleSelected(element, index),
+                      }))}
                     />
                   ) : (
                     <DropdownButton
                       text={item.name}
+                      active={item.url === urlPath}
                       child={item.elements}
                       options={item.elements.map((element) => ({
                         text: element.name,

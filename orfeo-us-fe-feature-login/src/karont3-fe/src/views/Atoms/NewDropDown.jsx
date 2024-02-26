@@ -3,8 +3,17 @@ import "../../static/css/newdropdown.css";
 import DropdownButton from "./DropdownButton";
 
 export const NewDropdown = ({ text, child, options }) => {
+ 
   const refChild = useRef();
-  console.log("NewDropDown ", child);
+
+  const handleSelected = (url, index) => {
+    setSelectedItem(index);
+    //history.push(url.url)
+    window.location.replace(`${url.url}`);
+    //return <Navigate replace to={`${url.url}`} />;
+  };
+
+  const urlPath = window.location.href;
 
   const cambiarClase = () => {
     if (refChild.current) {
@@ -33,10 +42,8 @@ export const NewDropdown = ({ text, child, options }) => {
                   <DropdownButton
                     text={item.name}
                     child={item.elements}
-                    options={item.elements.map((element) => ({
-                      text: element.name,
-                      onClick: () => handleSelected(element, index),
-                    }))}
+                    active={item.url === urlPath}
+                    options= {options}
                   />
                 ) : (
                   <></>

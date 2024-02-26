@@ -21,9 +21,9 @@
       transition: all 0.3s ease;
     }
     
-    button:hover, .btn:hover {
+    /*button:hover, .btn:hover {
       background-color: var(--secondary-color);
-    }
+    }*/
     
     /* Lista de elementos */
     ul {
@@ -45,7 +45,7 @@
     
     /* Elemento activo */
     .active .btn-secondary  {
-      background-color: var(--secondary-color);
+      /*background-color: var(--secondary-color);*/
       color: var(--text-color);
       border-radius: 5px;
       padding: 10px 20px;
@@ -74,13 +74,13 @@
     margin: 5px 15px;
     left: 5px;
     text-align: left;
-    background-color: lightgray;
+    /*background-color: lightgray;*/
 }
 
 button {
     width: 90%;
     text-align: left;
     padding: 10px;
-    background-color: lightblue;
+    /*background-color: lightblue;*/
     border: 1px solid darkgray;
 }
